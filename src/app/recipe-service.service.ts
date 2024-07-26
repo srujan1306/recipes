@@ -267,4 +267,7 @@ export class RecipeServiceService {
   ];
 
   constructor() {}
+  getrecipes() {
+    return this.recipes;
+  }
 }

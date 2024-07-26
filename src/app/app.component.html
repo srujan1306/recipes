@@ -1,14 +1,16 @@
-<div class="all-recipes-container">
-  @for(recipe of recipe_list; track $index) {
-  <app-allrecipes [everyrecipe]="recipe" />
-  }
-</div>
 <header>
   <nav>
     <a routerLink="/">Home</a><br />
-
+    |
     <a routerLink="/recipes">AllRecipes</a>
+    |
     <a routerLink="/addrecipe">AddRecipes</a>
-    <router-outlet></router-outlet>
   </nav>
 </header>
+
+<!-- <div class="all-recipes-container">
+  @for(recipe of recipe_list; track $index) {
+  <app-allrecipes [everyrecipe]="recipe" />
+  }
+</div> -->
+<router-outlet></router-outlet>
