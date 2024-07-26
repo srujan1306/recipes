@@ -156,7 +156,7 @@ export class RecipeServiceService {
       category: 'veg',
       rating: '8.5',
       summary:
-        'Fresh salad with sliced tomatoes, mozzarella, and basil leaves. Drizzled with olive oil and balsamic vinegar, seasoned with salt and pepper, ready in 10 minutes.',
+        'Fresh salad with sliced tomatoes, mozzarella, & basil leaves. Drizzled with olive oil & balsamic vinegar, seasoned with salt & pepper, ready in 10 minutes.',
     },
     {
       title: 'Butter Chicken',
