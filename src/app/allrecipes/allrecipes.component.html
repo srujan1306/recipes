@@ -13,7 +13,7 @@
     />
   </head>
   <body>
-    <div class="wholecontainer">
+    <mat-card class="wholecontainer">
       <div class="container">
         <img src="{{ everyrecipe.image }}" alt="Extraordinary" />
         <div class="headingAndRating">
@@ -22,7 +22,7 @@
           </h1>
           <p class="rating">
             ⭐
-            <!-- {{ movies_data.rating }} -->
+            {{ everyrecipe.rating }}
           </p>
         </div>
         <!-- <button mat-raised-button>Show Description</button> -->
@@ -36,6 +36,6 @@
         </div> -->
         <button mat-raised-button>delete</button>
       </div>
-    </div>
+    </mat-card>
   </body>
 </html>
