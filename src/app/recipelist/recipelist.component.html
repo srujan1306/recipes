@@ -1,5 +1,8 @@
 <div class="all-recipes-container">
   @for(recipe of recipe_list; track $index) {
-  <app-allrecipes [everyrecipe]="recipe" />
+  <app-allrecipes
+    [everyrecipe]="recipe"
+    (delete_the_recipe)="deleterecipe($event)"
+  />
   }
 </div>

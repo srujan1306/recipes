@@ -270,4 +270,7 @@ export class RecipeServiceService {
   getrecipes() {
     return this.recipes;
   }
+  delete_the_recipe(movie_to_be_deleted: any) {
+    this.recipes.splice(this.recipes.indexOf(movie_to_be_deleted), 1);
+  }
 }
