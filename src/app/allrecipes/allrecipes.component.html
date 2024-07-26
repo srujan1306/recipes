@@ -25,6 +25,19 @@
             {{ everyrecipe.rating }}
           </p>
         </div>
+        <p class="category">
+          {{ everyrecipe.category }}
+        </p>
+        <button mat-raised-button>
+          <!-- (click)="showDescription()" -->
+          Show Description
+        </button>
+        <!-- <p class="summary" style="display: none">{{ movies_data.summary }}</p> -->
+        @if(show){
+        <div class="description">
+          <p class="summary">{{ everyrecipe.summary }}</p>
+        </div>
+        }
         <!-- <button mat-raised-button>Show Description</button> -->
         <!-- <p class="summary" style="display: none">{{ movies_data.summary }}</p> -->
 
