@@ -7,7 +7,8 @@ export class RecipeServiceService {
   recipes = [
     {
       title: 'Spaghetti Carbonara',
-      image: 'carbonara.jpg',
+      image:
+        'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1001491_11-2e0fa5c.jpg?quality=90&resize=440,400',
       ingredients: [
         'spaghetti',
         'eggs',
@@ -24,10 +25,12 @@ export class RecipeServiceService {
         'Season with black pepper and serve.',
       ],
       category: 'non-veg',
+      rating: '10',
     },
     {
       title: 'Margherita Pizza',
-      image: 'margherita.jpg',
+      image:
+        'https://recipes.timesofindia.com/thumb/56868564.cms?width=1200&height=900',
       ingredients: [
         'pizza dough',
         'tomato sauce',
@@ -45,10 +48,12 @@ export class RecipeServiceService {
         'Add fresh basil leaves and drizzle with olive oil before serving.',
       ],
       category: 'veg',
+      rating: '7',
     },
     {
       title: 'Chicken Tikka Masala',
-      image: 'chicken_tikka_masala.jpg',
+      image:
+        'https://www.seriouseats.com/thmb/DbQHUK2yNCALBnZE-H1M2AKLkok=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chicken-tikka-masala-for-the-grill-recipe-hero-2_1-cb493f49e30140efbffec162d5f2d1d7.JPG',
       ingredients: [
         'chicken',
         'yogurt',
@@ -67,10 +72,12 @@ export class RecipeServiceService {
         'Serve with rice or naan.',
       ],
       category: 'non-veg',
+      rating: '9',
     },
     {
       title: 'Vegetable Stir Fry',
-      image: 'vegetable_stir_fry.jpg',
+      image:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6kuBaXOs142J09xLojqLWQobGbx-9iloy-A&s',
       ingredients: [
         'broccoli',
         'carrots',
@@ -89,6 +96,7 @@ export class RecipeServiceService {
         'Serve hot with rice or noodles.',
       ],
       category: 'veg',
+      rating: '7',
     },
     {
       title: 'Beef Tacos',
@@ -111,10 +119,12 @@ export class RecipeServiceService {
         'Serve immediately.',
       ],
       category: 'non-veg',
+      rating: '8',
     },
     {
       title: 'Caprese Salad',
-      image: 'caprese_salad.jpg',
+      image:
+        'https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2019/07/Caprese-Salad-main-1.jpg',
       ingredients: [
         'tomatoes',
         'mozzarella cheese',
@@ -133,10 +143,12 @@ export class RecipeServiceService {
         'Season with salt and pepper to taste.',
       ],
       category: 'veg',
+      rating: '8.5',
     },
     {
       title: 'Butter Chicken',
-      image: 'butter_chicken.jpg',
+      image:
+        'https://www.simplyrecipes.com/thmb/LYwosfrO2cGCT2_bGS5wIeHRnd8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__01__Butter-Chicken-LEAD-1-f8a0cd09ea9442ce93651887f164db03.jpg',
       ingredients: [
         'chicken',
         'butter',
@@ -155,10 +167,12 @@ export class RecipeServiceService {
         'Serve with rice or naan.',
       ],
       category: 'non-veg',
+      rating: '8.5',
     },
     {
       title: 'Vegetable Curry',
-      image: 'vegetable_curry.jpg',
+      image:
+        'https://img.taste.com.au/kUVCKnrN/taste/2016/11/indian-style-vegetable-curry-59371-1.jpeg',
       ingredients: [
         'potatoes',
         'carrots',
@@ -179,10 +193,12 @@ export class RecipeServiceService {
         'Serve hot with rice or bread.',
       ],
       category: 'veg',
+      rating: '8.5',
     },
     {
       title: 'Shrimp Scampi',
-      image: 'shrimp_scampi.jpg',
+      image:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj5YdYf4Eez99z2iqRJs3AP_Fr51Yypkg9XQ&s',
       ingredients: [
         'shrimp',
         'garlic',
@@ -202,10 +218,12 @@ export class RecipeServiceService {
         'Serve immediately.',
       ],
       category: 'non-veg',
+      rating: '8.5',
     },
     {
       title: 'Paneer Butter Masala',
-      image: 'paneer_butter_masala.jpg',
+      image:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_JfZHtD_jlggLqhDlthd7Jg2o4gt7OrWH7w&s',
       ingredients: [
         'paneer',
         'butter',
@@ -223,6 +241,7 @@ export class RecipeServiceService {
         'Serve hot with rice or naan.',
       ],
       category: 'veg',
+      rating: '8.5',
     },
   ];
 
