@@ -1,0 +1,10 @@
+.all-recipes-container {
+  display: flex;
+  // flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.add_movie_inputs {
+  display: flex;
+  flex-direction: row;
+}
