@@ -7,7 +7,8 @@ export class RecipeServiceService {
   recipes = [
     {
       title: 'Spaghetti Carbonara',
-      image: 'carbonara.jpg',
+      image:
+        'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1001491_11-2e0fa5c.jpg?quality=90&resize=440,400',
       ingredients: [
         'spaghetti',
         'eggs',
@@ -24,10 +25,12 @@ export class RecipeServiceService {
         'Season with black pepper and serve.',
       ],
       category: 'non-veg',
+      rating: '10',
     },
     {
       title: 'Margherita Pizza',
-      image: 'margherita.jpg',
+      image:
+        'https://recipes.timesofindia.com/thumb/56868564.cms?width=1200&height=900',
       ingredients: [
         'pizza dough',
         'tomato sauce',
@@ -45,6 +48,7 @@ export class RecipeServiceService {
         'Add fresh basil leaves and drizzle with olive oil before serving.',
       ],
       category: 'veg',
+      rating: '7',
     },
     {
       title: 'Chicken Tikka Masala',
