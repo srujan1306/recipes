@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AllrecipesComponent } from '../allrecipes/allrecipes.component';
+import { RecipeServiceService } from '../recipe-service.service';
 
 @Component({
   selector: 'app-add-recipe',
@@ -14,15 +15,27 @@ export class AddRecipeComponent {
   image = '';
   title = '';
   category = '';
+  rating = '';
   summary = '';
+  ingredients = '';
+  timeToComplete = '';
+  procedure = '';
+
+  constructor(public RecipeServiceService: RecipeServiceService) {
+    this.recipeadd = this.RecipeServiceService.recipes;
+  }
 
   addrecipe() {
     this.recipeadd.push({
       poster: this.image,
       name: this.title,
-      rating: this.category,
+      category: this.category,
+      rating: this.rating,
       // summary: this.summary,
       summary: this.summary,
+      ingredients: this.ingredients,
+      timeToComplete: this.timeToComplete,
+      procedure: this.procedure,
     });
   }
 }

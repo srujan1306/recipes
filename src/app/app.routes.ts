@@ -16,11 +16,11 @@ export const routes: Routes = [
   },
 
   {
-    path: '**',
-    component: PagenotfoundComponent,
-  },
-  {
     path: 'addrecipes',
     component: AddRecipeComponent,
+  },
+  {
+    path: '**',
+    component: PagenotfoundComponent,
   },
 ];
