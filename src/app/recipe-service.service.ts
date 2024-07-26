@@ -96,7 +96,7 @@ export class RecipeServiceService {
         'Serve hot with rice or noodles.',
       ],
       category: 'veg',
-      rating: '7',
+      rating: '8.5',
     },
     {
       title: 'Beef Tacos',
@@ -168,7 +168,7 @@ export class RecipeServiceService {
         'Serve with rice or naan.',
       ],
       category: 'non-veg',
-      rating: '8.5',
+      rating: '9',
     },
     {
       title: 'Vegetable Curry',
@@ -194,7 +194,7 @@ export class RecipeServiceService {
         'Serve hot with rice or bread.',
       ],
       category: 'veg',
-      rating: '8.5',
+      rating: '9',
     },
     {
       title: 'Shrimp Scampi',
@@ -219,7 +219,7 @@ export class RecipeServiceService {
         'Serve immediately.',
       ],
       category: 'non-veg',
-      rating: '8.5',
+      rating: '9.5',
     },
     {
       title: 'Paneer Butter Masala',
