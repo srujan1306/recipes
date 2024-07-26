@@ -28,8 +28,7 @@
         <p class="category">
           {{ everyrecipe.category }}
         </p>
-        <button mat-raised-button>
-          <!-- (click)="showDescription()" -->
+        <button mat-raised-button (click)="showDescription()">
           Show Description
         </button>
         <!-- <p class="summary" style="display: none">{{ movies_data.summary }}</p> -->
@@ -47,8 +46,8 @@
             summary
           </p>
         </div> -->
-        <button mat-raised-button>delete</button>
       </div>
+      <button mat-raised-button>delete</button>
     </mat-card>
   </body>
 </html>
