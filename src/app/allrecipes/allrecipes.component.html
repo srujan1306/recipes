@@ -15,10 +15,7 @@
   <body>
     <div class="wholecontainer">
       <div class="container">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU4JHABAZ2nDOR_TcvlZvIA-riyuylqApYHw&s"
-          alt="Extraordinary"
-        />
+        <img src="{{ everyrecipe.image }}" alt="Extraordinary" />
         <div class="headingAndRating">
           <h1>
             {{ everyrecipe.title }}
@@ -28,15 +25,15 @@
             <!-- {{ movies_data.rating }} -->
           </p>
         </div>
-        <button mat-raised-button>Show Description</button>
+        <!-- <button mat-raised-button>Show Description</button> -->
         <!-- <p class="summary" style="display: none">{{ movies_data.summary }}</p> -->
 
-        <div class="description">
+        <!-- <div class="description">
           <p class="summary">
-            <!-- {{ movies_data.summary }} -->
+            {{ movies_data.summary }}
             summary
           </p>
-        </div>
+        </div> -->
         <button mat-raised-button>delete</button>
       </div>
     </div>
