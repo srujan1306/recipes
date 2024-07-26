@@ -26,6 +26,8 @@ export class RecipeServiceService {
       ],
       category: 'non-veg',
       rating: '10',
+      summary:
+        "Classic Italian pasta dish with spaghetti, eggs, parmesan cheese, and crispy pancetta. Ready in 30 minutes, it's creamy and seasoned with black pepper.",
     },
     {
       title: 'Margherita Pizza',
@@ -49,6 +51,8 @@ export class RecipeServiceService {
       ],
       category: 'veg',
       rating: '7',
+      summary:
+        'Simple vegetarian pizza with tomato sauce, mozzarella cheese, and fresh basil. Bakes in 10-12 minutes at 475°F, drizzled with olive oil before serving.',
     },
     {
       title: 'Chicken Tikka Masala',
@@ -73,6 +77,8 @@ export class RecipeServiceService {
       ],
       category: 'non-veg',
       rating: '9',
+      summary:
+        'Marinated and grilled chicken in a creamy tomato-based sauce with spices. Takes 1 hour 30 minutes, perfect with rice or naan.',
     },
     {
       title: 'Vegetable Stir Fry',
@@ -97,6 +103,8 @@ export class RecipeServiceService {
       ],
       category: 'veg',
       rating: '8.5',
+      summary:
+        'Quick 20-minute dish with broccoli, carrots, bell peppers, and soy sauce. Stir-fried with garlic and ginger, served with rice or noodles.',
     },
     {
       title: 'Beef Tacos',
@@ -121,6 +129,8 @@ export class RecipeServiceService {
       ],
       category: 'non-veg',
       rating: '8',
+      summary:
+        'Ground beef seasoned with taco mix, served in warm taco shells with lettuce, tomato, cheese, and sour cream. Ready in 25 minutes for a flavorful meal.',
     },
     {
       title: 'Caprese Salad',
@@ -145,6 +155,8 @@ export class RecipeServiceService {
       ],
       category: 'veg',
       rating: '8.5',
+      summary:
+        'Fresh salad with sliced tomatoes, mozzarella, and basil leaves. Drizzled with olive oil and balsamic vinegar, seasoned with salt and pepper, ready in 10 minutes.',
     },
     {
       title: 'Butter Chicken',
@@ -169,6 +181,8 @@ export class RecipeServiceService {
       ],
       category: 'non-veg',
       rating: '9',
+      summary:
+        'Marinated chicken cooked in a rich butter and cream sauce with spices. Takes 1 hour 15 minutes, best enjoyed with rice or naan.',
     },
     {
       title: 'Vegetable Curry',
@@ -195,6 +209,8 @@ export class RecipeServiceService {
       ],
       category: 'veg',
       rating: '9',
+      summary:
+        'Flavorful curry with potatoes, carrots, peas, and coconut milk, spiced with curry powder. Ready in 40 minutes, served hot with rice or bread.',
     },
     {
       title: 'Shrimp Scampi',
@@ -220,6 +236,8 @@ export class RecipeServiceService {
       ],
       category: 'non-veg',
       rating: '9.5',
+      summary:
+        'Sautéed shrimp in garlic butter, white wine, and lemon juice, served over spaghetti. A 30-minute dish garnished with parsley, perfect for a quick meal.',
     },
     {
       title: 'Paneer Butter Masala',
@@ -243,6 +261,8 @@ export class RecipeServiceService {
       ],
       category: 'veg',
       rating: '8.5',
+      summary:
+        'Fried paneer cubes in a creamy tomato sauce with butter and spices. A vegetarian dish ready in 45 minutes, served with rice or naan.',
     },
   ];
 

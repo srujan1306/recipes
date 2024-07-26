@@ -15,4 +15,8 @@ export class AllrecipesComponent {
   // constructor(public RecipeServiceService: RecipeServiceService) {
   //   this.recipe_list = this.RecipeServiceService.recipes;
   // }
+  show = true;
+  showDescription() {
+    this.show = !this.show;
+  }
 }
