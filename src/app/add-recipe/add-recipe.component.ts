@@ -14,6 +14,7 @@ export class AddRecipeComponent {
   image = '';
   title = '';
   category = '';
+  summary = '';
 
   addrecipe() {
     this.recipeadd.push({
@@ -21,6 +22,7 @@ export class AddRecipeComponent {
       name: this.title,
       rating: this.category,
       // summary: this.summary,
+      summary: this.summary,
     });
   }
 }
