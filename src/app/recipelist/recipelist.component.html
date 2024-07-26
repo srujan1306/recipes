@@ -1,0 +1,5 @@
+<div class="all-recipes-container">
+  @for(recipe of recipe_list; track $index) {
+  <app-allrecipes [everyrecipe]="recipe" />
+  }
+</div>
