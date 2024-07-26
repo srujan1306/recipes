@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RecipeServiceService } from '../recipe-service.service';
 import { MatCardModule } from '@angular/material/card';
 import { RouterLink } from '@angular/router';
@@ -22,5 +22,10 @@ export class AllrecipesComponent {
   show = true;
   showDescription() {
     this.show = !this.show;
+  }
+  @Output() delete_the_recipe = new EventEmitter<any>();
+  deleteMovie() {
+    this.delete_the_recipe.emit(this.everyrecipe);
+    // console.log('child', this.movies_data);
   }
 }
