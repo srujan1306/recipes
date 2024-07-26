@@ -100,7 +100,8 @@ export class RecipeServiceService {
     },
     {
       title: 'Beef Tacos',
-      image: 'beef_tacos.jpg',
+      image:
+        'https://carlsbadcravings.com/wp-content/uploads/2022/02/Shredded-Beef-Tacos-featured.jpg',
       ingredients: [
         'ground beef',
         'taco seasoning',
