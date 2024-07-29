@@ -2,14 +2,10 @@
   <nav>
     <ul>
       <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/recipes">AllRecipes</a></li>
+      <!-- <li><a routerLink="/recipes">AllRecipes</a></li> -->
       <li><a routerLink="/addrecipes">AddRecipes</a></li>
+      <li><a routerLink="/search">Recipes</a></li>
     </ul>
   </nav>
 </header>
-<!-- <div class="all-recipes-container">
-  @for(recipe of recipe_list; track $index) {
-  <app-allrecipes [everyrecipe]="recipe" />
-  }
-</div> -->
 <router-outlet></router-outlet>

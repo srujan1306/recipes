@@ -1,9 +1,18 @@
-<p>recipedetails works!</p>
-<p class="rating">
-  ⭐
-  {{ everyrecipe.ingredients }}
-</p>
+<!-- <p>recipedetails works!</p> -->
+<mat-card class="details">
+  <p class="Title">
+    {{ everyrecipe.title }}
+  </p>
 
-<p class="category">
-  {{ everyrecipe.category }}
-</p>
+  <p class="Category">
+    {{ everyrecipe.category }}
+  </p>
+
+  <p class="Ingredients">
+    {{ everyrecipe.ingredients }}
+  </p>
+
+  <p class="Procedure">
+    {{ everyrecipe.procedure }}
+  </p>
+</mat-card>
