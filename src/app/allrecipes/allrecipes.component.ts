@@ -3,22 +3,31 @@ import { RecipeServiceService } from '../recipe-service.service';
 import { MatCardModule } from '@angular/material/card';
 import { RouterLink } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-allrecipes',
   standalone: true,
-  imports: [MatCardModule, MatIconModule, RouterLink],
+  imports: [
+    MatCardModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    FormsModule,
+    RouterLink,
+  ],
   templateUrl: './allrecipes.component.html',
   styleUrl: './allrecipes.component.scss',
 })
 export class AllrecipesComponent {
-  @Input() everyrecipe: any;
-  // allrecipes: any;
-  // constructor(public RecipeServiceService: RecipeServiceService) {
-  //   this.recipe_list = this.RecipeServiceService.recipes;
-  // }
-  constructor(public MovielistService: RecipeServiceService) {
-    this.everyrecipe = this.MovielistService.recipes;
+  @Input() everyrecipe: any = [];
+
+  constructor(private RecipeServiceService: RecipeServiceService) {
+    this.everyrecipe = this.RecipeServiceService.getrecipes();
   }
   show = true;
   showDescription() {
@@ -27,6 +36,5 @@ export class AllrecipesComponent {
   @Output() delete_the_recipe = new EventEmitter<any>();
   deleteRecipe() {
     this.delete_the_recipe.emit(this.everyrecipe);
-    // console.log('child', this.movies_data);
   }
 }
