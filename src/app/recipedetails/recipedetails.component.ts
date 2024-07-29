@@ -1,11 +1,22 @@
 import { Component } from '@angular/core';
 import { RecipeServiceService } from '../recipe-service.service';
 import { ActivatedRoute } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 @Component({
   selector: 'app-recipedetails',
   standalone: true,
-  imports: [],
+  imports: [
+    MatCardModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+  ],
   templateUrl: './recipedetails.component.html',
   styleUrl: './recipedetails.component.scss',
 })
@@ -275,8 +286,18 @@ export class RecipedetailsComponent {
   constructor(
     public RecipeServiceService: RecipeServiceService,
     private route: ActivatedRoute
-  ) {
-    let idx = this.route.snapshot.paramMap.get('id');
-    this.RecipeServiceService.getrecipebyindex(idx);
+  ) {}
+  ngOnInit(): void {
+    // Get the index from the route parameters
+    const idx = this.route.snapshot.paramMap.get('id');
+    // Convert index to number
+    const index = Number(idx);
+    if (index >= 0 && index < this.recipes.length) {
+      this.everyrecipe = this.recipes[index];
+    }
   }
+  // ) {
+  //   let idx = this.route.snapshot.paramMap.get('id');
+  //   this.RecipeServiceService.getrecipebyindex(idx);
+  // }
 }

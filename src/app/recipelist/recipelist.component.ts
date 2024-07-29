@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatSelectModule,
     FormsModule,
+    AllrecipesComponent,
   ],
   templateUrl: './recipelist.component.html',
   styleUrl: './recipelist.component.scss',
@@ -23,6 +24,7 @@ export class RecipelistComponent {
   searchTerm: string = '';
   recipe_list: any;
   filteredRecipes: any;
+  idx: any;
 
   constructor(public RecipeServiceService: RecipeServiceService) {
     this.recipe_list = this.RecipeServiceService.getrecipes();
