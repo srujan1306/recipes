@@ -8,6 +8,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+
 // import { RecipeServiceService } from '../recipe-service.service';
 
 @Component({
@@ -21,6 +23,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatSelectModule,
     FormsModule,
     RouterLink,
+    MatButtonModule,
   ],
   templateUrl: './allrecipes.component.html',
   styleUrl: './allrecipes.component.scss',

@@ -28,17 +28,25 @@
         <p class="category">
           {{ everyrecipe.category }}
         </p>
-        <button mat-raised-button (click)="showDescription()">
-          Show Description
-        </button>
+        <div class="summarydetails">
+          <button mat-icon-button (click)="showDescription()">
+            <mat-icon>{{
+              show ? "keyboard_arrow_up" : "keyboard_arrow_down"
+            }}</mat-icon>
+          </button>
+          <button mat-icon-button class="details">
+            <mat-icon>info</mat-icon>
+          </button>
+        </div>
         <!-- <p class="summary" style="display: none">{{ movies_data.summary }}</p> -->
         @if(show){
         <div class="description">
           <p class="summary">{{ everyrecipe.summary }}</p>
         </div>
-        <button class="details" (click)="getrecipebyindex(i)">details</button>
+
         }
       </div>
+
       <mat-icon class="delete-button" (click)="deleteRecipe()">delete</mat-icon>
     </mat-card>
   </body>

@@ -2,11 +2,14 @@ import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { RecipeServiceService } from '../recipe-service.service';
+import { MatFormField } from '@angular/material/form-field';
+import { MatInput } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-add-recipe',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, MatFormField, MatInput, MatButtonModule],
   templateUrl: './add-recipe.component.html',
   styleUrl: './add-recipe.component.scss',
 })
