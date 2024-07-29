@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AllrecipesComponent } from '../allrecipes/allrecipes.component';
+
 import { RecipeServiceService } from '../recipe-service.service';
 
 @Component({
   selector: 'app-add-recipe',
   standalone: true,
-  imports: [FormsModule, AllrecipesComponent],
+  imports: [FormsModule],
   templateUrl: './add-recipe.component.html',
   styleUrl: './add-recipe.component.scss',
 })

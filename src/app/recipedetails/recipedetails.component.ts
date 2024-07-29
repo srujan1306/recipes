@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { RecipeServiceService } from '../recipe-service.service';
 import { ActivatedRoute } from '@angular/router';
-import { AllrecipesComponent } from '../allrecipes/allrecipes.component';
 
 @Component({
   selector: 'app-recipedetails',
   standalone: true,
-  imports: [AllrecipesComponent],
+  imports: [],
   templateUrl: './recipedetails.component.html',
   styleUrl: './recipedetails.component.scss',
 })
