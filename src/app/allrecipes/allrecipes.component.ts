@@ -1,9 +1,14 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-// import { RecipeServiceService } from '../recipe-service.service';
+import { RecipeServiceService } from '../recipe-service.service';
 import { MatCardModule } from '@angular/material/card';
 import { Router, RouterLink } from '@angular/router';
 
 import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+// import { RecipeServiceService } from '../recipe-service.service';
 
 @Component({
   selector: 'app-allrecipes',
