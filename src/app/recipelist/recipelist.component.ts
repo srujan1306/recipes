@@ -30,8 +30,8 @@ export class RecipelistComponent {
   constructor(public RecipeServiceService: RecipeServiceService) {
     this.recipe_list = this.RecipeServiceService.getrecipes();
   }
-  deleterecipe(movie_to_be_deleted: any) {
-    console.log('parent', movie_to_be_deleted);
-    this.RecipeServiceService.delete_the_recipe(movie_to_be_deleted);
+  deleterecipe(recipe_to_be_deleted: any) {
+    // console.log('parent', movie_to_be_deleted);
+    this.RecipeServiceService.delete_the_recipe(recipe_to_be_deleted);
   }
 }
