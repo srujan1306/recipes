@@ -34,7 +34,11 @@
               show ? "keyboard_arrow_up" : "keyboard_arrow_down"
             }}</mat-icon>
           </button>
-          <button mat-icon-button class="details">
+          <button
+            mat-icon-button
+            class="details"
+            (click)="getrecipebyindex(idx)"
+          >
             <mat-icon>info</mat-icon>
           </button>
         </div>
