@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class RecipeServiceService {
-  recipes = [
+  recipes: any = [
     {
       title: 'Spaghetti Carbonara',
       image:
@@ -273,7 +273,8 @@ export class RecipeServiceService {
   delete_the_recipe(movie_to_be_deleted: any) {
     this.recipes.splice(this.recipes.indexOf(movie_to_be_deleted), 1);
   }
-  // getrecipebyindex(idx: number) {
-  //   return this.recipes(idx);
-  // }
+
+  getrecipebyindex(idx: any) {
+    return this.recipes[idx];
+  }
 }

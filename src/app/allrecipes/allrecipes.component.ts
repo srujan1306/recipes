@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RecipeServiceService } from '../recipe-service.service';
 import { MatCardModule } from '@angular/material/card';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -20,15 +21,19 @@ import { Recipe } from '../app.component';
     MatSelectModule,
     FormsModule,
     RouterLink,
+    MatButtonModule,
   ],
   templateUrl: './allrecipes.component.html',
   styleUrl: './allrecipes.component.scss',
 })
 export class AllrecipesComponent {
-  @Input() everyrecipe: any = [];
-
-  constructor(private RecipeServiceService: RecipeServiceService) {
-    this.everyrecipe = this.RecipeServiceService.getrecipes();
+  @Input() everyrecipe: any;
+  // allrecipes: any;
+  // constructor(public RecipeServiceService: RecipeServiceService) {
+  //   this.recipe_list = this.RecipeServiceService.recipes;
+  // }
+  constructor(public MovielistService: RecipeServiceService) {
+    this.everyrecipe = this.MovielistService.recipes;
   }
   show = true;
   showDescription() {
@@ -37,5 +42,13 @@ export class AllrecipesComponent {
   @Output() delete_the_recipe = new EventEmitter<any>();
   deleteRecipe() {
     this.delete_the_recipe.emit(this.everyrecipe);
+  }
+
+  // getdetails(idx: any) {
+  //   this.router.navigate(['/recipes:idx', idx]);
+  // }
+
+  getrecipebyindex(idx: any) {
+    return this.everyrecipe[idx];
   }
 }
