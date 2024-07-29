@@ -23,7 +23,7 @@ import { Recipe } from '../app.component';
 })
 export class RecipelistComponent {
   searchTerm: string = '';
-  recipe_list: any;
+  @Input() recipe_list: any;
   filteredRecipes: any;
   idx: any;
 
