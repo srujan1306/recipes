@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { Recipe } from '../app.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-allrecipes',
