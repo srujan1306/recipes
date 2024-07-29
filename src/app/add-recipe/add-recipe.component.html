@@ -1,13 +1,57 @@
 <!-- <p>add-recipe works!</p> -->
 <div class="add-recipe-form">
-  <input type="text" [(ngModel)]="image" placeholder="Image" />
-  <input type="text" [(ngModel)]="title" placeholder="Title" />
+  <mat-form-field>
+    <input matInput type="text" [(ngModel)]="image" placeholder="Image" />
+  </mat-form-field>
+  <!-- <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Favorite food</mat-label>
+      <input matInput placeholder="Ex. Pizza" value="Sushi">
+    </mat-form-field> -->
 
-  <input type="text" [(ngModel)]="category" placeholder="category" />
-  <input type="text" [(ngModel)]="rating" placeholder="rating" />
-  <input type="text" [(ngModel)]="summary" placeholder="summary" />
-  <input type="text" [(ngModel)]="ingredients" placeholder="Ingredients" />
-  <input type="text" [(ngModel)]="timeToComplete" placeholder="Time" />
-  <input type="text" [(ngModel)]="procedure" placeholder="Procedure" />
-  <button (click)="addrecipe()">Add Recipe</button>
+  <mat-form-field>
+    <input matInput type="text" [(ngModel)]="title" placeholder="Title" />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" [(ngModel)]="category" placeholder="category" />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" [(ngModel)]="rating" placeholder="rating" />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" [(ngModel)]="summary" placeholder="summary" />
+  </mat-form-field>
+  <mat-form-field>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="ingredients"
+      placeholder="Ingredients"
+    />
+  </mat-form-field>
+  <mat-form-field>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="timeToComplete"
+      placeholder="Time"
+    />
+  </mat-form-field>
+  <mat-form-field>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="procedure"
+      placeholder="Procedure"
+    />
+  </mat-form-field>
+  <button mat-flat-button (click)="addrecipe()">Add Recipe</button>
 </div>
+<!-- <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Favorite food</mat-label>
+      <input matInput placeholder="Ex. Pizza" value="Sushi">
+    </mat-form-field> -->
+<!-- <mat-form-field>
+  <input matInput type="text" [(ngModel)]="poster" placeholder="poster" />
+</mat-form-field> -->

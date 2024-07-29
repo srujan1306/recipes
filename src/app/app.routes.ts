@@ -5,6 +5,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { RecipelistComponent } from './recipelist/recipelist.component';
 import { RecipedetailsComponent } from './recipedetails/recipedetails.component';
+import { SearchComponent } from './search/search.component';
 
 export const routes: Routes = [
   {
@@ -14,6 +15,10 @@ export const routes: Routes = [
   {
     path: 'recipes',
     component: RecipelistComponent,
+  },
+  {
+    path: 'search',
+    component: SearchComponent,
   },
 
   {

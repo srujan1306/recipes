@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-// import { RecipeServiceService } from '../recipe-service.service';
+import { RecipeServiceService } from '../recipe-service.service';
 import { MatCardModule } from '@angular/material/card';
 import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
@@ -9,7 +9,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
-import { RecipeServiceService } from '../recipe-service.service';
+import { Recipe } from '../app.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-allrecipes',
@@ -22,6 +23,7 @@ import { RecipeServiceService } from '../recipe-service.service';
     MatSelectModule,
     FormsModule,
     RouterLink,
+    MatButtonModule,
   ],
   templateUrl: './allrecipes.component.html',
   styleUrl: './allrecipes.component.scss',
