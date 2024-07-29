@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
+import { RecipeServiceService } from '../recipe-service.service';
+import { ActivatedRoute } from '@angular/router';
+import { AllrecipesComponent } from '../allrecipes/allrecipes.component';
 
 @Component({
   selector: 'app-recipedetails',
   standalone: true,
-  imports: [],
+  imports: [AllrecipesComponent],
   templateUrl: './recipedetails.component.html',
   styleUrl: './recipedetails.component.scss',
 })
 export class RecipedetailsComponent {
-  recipes = [
+  recipes: any = [
     {
       title: 'Spaghetti Carbonara',
       image:
@@ -269,7 +272,12 @@ export class RecipedetailsComponent {
         'Fried paneer cubes in a creamy tomato sauce with butter and spices. A vegetarian dish ready in 45 minutes, served with rice or naan.',
     },
   ];
-  // constructor(public RecipeServiceService: RecipeServiceService) {
-  //   this.recipeadd = this.RecipeServiceService.recipes;
-  // }
+  everyrecipe: any;
+  constructor(
+    public RecipeServiceService: RecipeServiceService,
+    private route: ActivatedRoute
+  ) {
+    let idx = this.route.snapshot.paramMap.get('id');
+    this.RecipeServiceService.getrecipebyindex(idx);
+  }
 }
