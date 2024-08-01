@@ -5,6 +5,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { RecipedetailsComponent } from './recipedetails/recipedetails.component';
 import { SearchComponent } from './search/search.component';
+import { EditRecipesComponent } from './edit-recipes/edit-recipes.component';
 
 export const routes: Routes = [
   {
@@ -17,6 +18,11 @@ export const routes: Routes = [
       { path: '', component: SearchComponent },
       { path: ':id', component: RecipedetailsComponent },
     ],
+  },
+
+  {
+    path: 'search/edit/:id',
+    component: EditRecipesComponent,
   },
   {
     path: 'addrecipes',

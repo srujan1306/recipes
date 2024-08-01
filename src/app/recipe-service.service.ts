@@ -255,4 +255,24 @@ export class RecipeServiceService {
       },
     }).then((res) => res.json());
   }
+
+  editrecipe(updatedrecipe: Recipe) {
+    // this.movieList.push(newMovie);
+
+    // Put
+    // 1. method
+    // 2. body - Data & JSON
+    // 3. Header - JSON
+
+    return fetch(
+      `https://6402db84f61d96ac487212a6.mockapi.io/movies/${updatedrecipe.id}`,
+      {
+        method: 'PUT',
+        body: JSON.stringify(updatedrecipe),
+        headers: {
+          'Content-type': 'application/json',
+        },
+      }
+    ).then((res) => res.json());
+  }
 }

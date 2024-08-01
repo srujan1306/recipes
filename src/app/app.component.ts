@@ -3,6 +3,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { AllrecipesComponent } from './allrecipes/allrecipes.component';
 import { RecipeServiceService } from './recipe-service.service';
 export interface Recipe {
+  id:string;
   title: string;
   image: string;
   ingredients: string;
