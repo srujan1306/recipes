@@ -25,22 +25,26 @@
             {{ everyrecipe.rating }}
           </p>
         </div>
-        <p class="category">
-          {{ everyrecipe.category }}
-        </p>
-        <div class="summarydetails">
-          <button mat-icon-button (click)="showDescription()">
-            <mat-icon>{{
-              show ? "keyboard_arrow_up" : "keyboard_arrow_down"
-            }}</mat-icon>
-          </button>
-          <button
-            mat-icon-button
-            class="details"
-            (click)="getrecipebyindex(idx)"
-          >
-            <mat-icon>info</mat-icon>
-          </button>
+        <div class="cat_des_info">
+          <div class="cat_des">
+            <div class="category">
+              <p>
+                {{ everyrecipe.category }}
+              </p>
+            </div>
+            <div class="summarydetails">
+              <button mat-icon-button (click)="showDescription()">
+                <mat-icon>{{
+                  show ? "keyboard_arrow_up" : "keyboard_arrow_down"
+                }}</mat-icon>
+              </button>
+            </div>
+          </div>
+          <div class="info">
+            <button mat-icon-button class="details">
+              <mat-icon>info</mat-icon>
+            </button>
+          </div>
         </div>
         <!-- <p class="summary" style="display: none">{{ movies_data.summary }}</p> -->
         @if(show){
@@ -52,7 +56,9 @@
         <!-- <button class="details" (click)="getrecipebyindex(idx)">details</button> -->
       </div>
 
-      <mat-icon class="delete-button" (click)="deleteRecipe()">delete</mat-icon>
+      <mat-icon class="delete-button" color="warn" (click)="deleteRecipe()"
+        >delete</mat-icon
+      >
     </mat-card>
   </body>
 </html>
