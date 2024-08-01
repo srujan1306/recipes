@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class RecipeServiceService {
   recipes: any = [
     {
+      id: '1',
       title: 'Spaghetti Carbonara',
       image:
         'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1001491_11-2e0fa5c.jpg?quality=90&resize=440,400',
@@ -30,6 +31,7 @@ export class RecipeServiceService {
         "Classic Italian pasta dish with spaghetti, eggs, parmesan cheese, and crispy pancetta. Ready in 30 minutes, it's creamy and seasoned with black pepper.",
     },
     {
+      id: '2',
       title: 'Margherita Pizza',
       image:
         'https://recipes.timesofindia.com/thumb/56868564.cms?width=1200&height=900',
@@ -55,6 +57,7 @@ export class RecipeServiceService {
         'Simple vegetarian pizza with tomato sauce, mozzarella cheese, and fresh basil. Bakes in 10-12 minutes at 475°F, drizzled with olive oil before serving.',
     },
     {
+      id: '3',
       title: 'Chicken Tikka Masala',
       image:
         'https://www.seriouseats.com/thmb/DbQHUK2yNCALBnZE-H1M2AKLkok=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chicken-tikka-masala-for-the-grill-recipe-hero-2_1-cb493f49e30140efbffec162d5f2d1d7.JPG',
@@ -81,6 +84,7 @@ export class RecipeServiceService {
         'Marinated and grilled chicken in a creamy tomato-based sauce with spices. Takes 1 hour 30 minutes, perfect with rice or naan.',
     },
     {
+      id: '4',
       title: 'Vegetable Stir Fry',
       image:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6kuBaXOs142J09xLojqLWQobGbx-9iloy-A&s',
@@ -107,6 +111,7 @@ export class RecipeServiceService {
         'Quick 20-minute dish with broccoli, carrots, bell peppers, and soy sauce. Stir-fried with garlic and ginger, served with rice or noodles.',
     },
     {
+      id: '5',
       title: 'Beef Tacos',
       image:
         'https://carlsbadcravings.com/wp-content/uploads/2022/02/Shredded-Beef-Tacos-featured.jpg',
@@ -133,6 +138,7 @@ export class RecipeServiceService {
         'Ground beef seasoned with taco mix, served in warm taco shells with lettuce, tomato, cheese, and sour cream. Ready in 25 minutes for a flavorful meal.',
     },
     {
+      id: '6',
       title: 'Caprese Salad',
       image:
         'https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2019/07/Caprese-Salad-main-1.jpg',
@@ -159,6 +165,7 @@ export class RecipeServiceService {
         'Fresh salad with sliced tomatoes, mozzarella, & basil leaves. Drizzled with olive oil & balsamic vinegar, seasoned with salt & pepper, ready in 10 minutes.',
     },
     {
+      id: '7',
       title: 'Butter Chicken',
       image:
         'https://www.simplyrecipes.com/thmb/LYwosfrO2cGCT2_bGS5wIeHRnd8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__01__Butter-Chicken-LEAD-1-f8a0cd09ea9442ce93651887f164db03.jpg',
@@ -185,6 +192,7 @@ export class RecipeServiceService {
         'Marinated chicken cooked in a rich butter and cream sauce with spices. Takes 1 hour 15 minutes, best enjoyed with rice or naan.',
     },
     {
+      id: '8',
       title: 'Vegetable Curry',
       image:
         'https://img.taste.com.au/kUVCKnrN/taste/2016/11/indian-style-vegetable-curry-59371-1.jpeg',
@@ -211,58 +219,6 @@ export class RecipeServiceService {
       rating: '9',
       summary:
         'Flavorful curry with potatoes, carrots, peas, and coconut milk, spiced with curry powder. Ready in 40 minutes, served hot with rice or bread.',
-    },
-    {
-      title: 'Shrimp Scampi',
-      image:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj5YdYf4Eez99z2iqRJs3AP_Fr51Yypkg9XQ&s',
-      ingredients: [
-        'shrimp',
-        'garlic',
-        'butter',
-        'white wine',
-        'lemon juice',
-        'parsley',
-        'spaghetti',
-      ],
-      timeToComplete: '30 minutes',
-      procedure: [
-        'Cook spaghetti in salted boiling water.',
-        'In a pan, melt butter and sauté garlic.',
-        'Add shrimp and cook until pink.',
-        'Pour in white wine and lemon juice, and simmer for 5 minutes.',
-        'Combine with cooked spaghetti and garnish with parsley.',
-        'Serve immediately.',
-      ],
-      category: 'non-veg',
-      rating: '9.5',
-      summary:
-        'Sautéed shrimp in garlic butter, white wine, and lemon juice, served over spaghetti. A 30-minute dish garnished with parsley, perfect for a quick meal.',
-    },
-    {
-      title: 'Paneer Butter Masala',
-      image:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_JfZHtD_jlggLqhDlthd7Jg2o4gt7OrWH7w&s',
-      ingredients: [
-        'paneer',
-        'butter',
-        'tomato puree',
-        'cream',
-        'garlic',
-        'ginger',
-        'spices',
-      ],
-      timeToComplete: '45 minutes',
-      procedure: [
-        'Fry paneer cubes until golden brown.',
-        'Prepare the sauce with butter, tomato puree, cream, garlic, ginger, and spices.',
-        'Add the fried paneer to the sauce and simmer for 10 minutes.',
-        'Serve hot with rice or naan.',
-      ],
-      category: 'veg',
-      rating: '8.5',
-      summary:
-        'Fried paneer cubes in a creamy tomato sauce with butter and spices. A vegetarian dish ready in 45 minutes, served with rice or naan.',
     },
   ];
 
