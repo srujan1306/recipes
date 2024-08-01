@@ -236,9 +236,7 @@ export class RecipeServiceService {
     return this.recipes[idx];
   }
   getRecipeById(id: string) {
-    return fetch(
-      `https://669a428d9ba098ed61fef756.mockapi.io/recipes/${id}`
-    ).then((res) => res.json());
+    return fetch(`${API}/recipes/${id}`).then((res) => res.json());
   }
   addrecipe(recipeadd: Newrecipe) {
     // this.movieList.push(newMovie);

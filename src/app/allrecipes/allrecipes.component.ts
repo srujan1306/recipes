@@ -40,9 +40,8 @@ export class AllrecipesComponent {
   //   rating: '',
   //   summary: '',
   // };
-  @Input() id: any;
+  @Input() id!: string;
   @Output() delete_the_recipe = new EventEmitter<any>();
-  idx: any;
 
   // allrecipes: any;
   // constructor(public RecipeServiceService: RecipeServiceService) {

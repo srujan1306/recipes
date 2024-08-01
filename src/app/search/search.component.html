@@ -15,6 +15,7 @@
   <app-allrecipes
     [everyrecipe]="recipe"
     (delete_the_recipe)="deleterecipe($event)"
+    [id]="recipe.id"
   />
   }
 </div>

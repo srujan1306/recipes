@@ -13,11 +13,10 @@ export const routes: Routes = [
   },
   {
     path: 'search',
-    component: SearchComponent,
-  },
-  {
-    path: 'search/:id',
-    component: RecipedetailsComponent,
+    children: [
+      { path: '', component: SearchComponent },
+      { path: ':id', component: RecipedetailsComponent },
+    ],
   },
   {
     path: 'addrecipes',
