@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-recipedetails',
@@ -283,21 +284,40 @@ export class RecipedetailsComponent {
     },
   ];
   everyrecipe: any;
+  isLoading: boolean = true;
+  msg = '';
+  trustedUrl!: SafeUrl;
   constructor(
     public RecipeServiceService: RecipeServiceService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private sanitizer: DomSanitizer
   ) {}
-  ngOnInit(): void {
-    // Get the index from the route parameters
-    const idx = this.route.snapshot.paramMap.get('id');
-    // Convert index to number
-    const index = Number(idx);
-    if (index >= 0 && index < this.recipes.length) {
-      this.everyrecipe = this.recipes[index];
-    }
+  ngOnInit() {
+    let id = this.route.snapshot.paramMap.get('id') as string; // From URL
+    this.RecipeServiceService.getRecipeById(id)
+      .then((data) => {
+        this.everyrecipe = data;
+        this.isLoading = false;
+        this.trustedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+          this.everyrecipe.image
+        );
+      })
+      .catch(() => {
+        this.isLoading = false;
+        this.msg = 'Something went wrong';
+      });
   }
-  // ) {
-  //   let idx = this.route.snapshot.paramMap.get('id');
-  //   this.RecipeServiceService.getrecipebyindex(idx);
+  // ngOnInit(): void {
+  //   // Get the index from the route parameters
+  //   const idx = this.route.snapshot.paramMap.get('id');
+  //   // Convert index to number
+  //   const index = Number(idx);
+  //   if (index >= 0 && index < this.recipes.length) {
+  //     this.everyrecipe = this.recipes[index];
+  //   }
   // }
+  // // ) {
+  // //   let idx = this.route.snapshot.paramMap.get('id');
+  // //   this.RecipeServiceService.getrecipebyindex(idx);
+  // // }
 }

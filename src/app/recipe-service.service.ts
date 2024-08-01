@@ -222,7 +222,6 @@ export class RecipeServiceService {
     },
   ];
 
-  constructor() {}
   getrecipes(): Promise<any[]> {
     return fetch('https://669a428d9ba098ed61fef756.mockapi.io/recipes').then(
       (res) => res.json()
@@ -234,5 +233,10 @@ export class RecipeServiceService {
 
   getrecipebyindex(idx: any) {
     return this.recipes[idx];
+  }
+  getRecipeById(id: string) {
+    return fetch(
+      `https://669a428d9ba098ed61fef756.mockapi.io/recipes/${id}`
+    ).then((res) => res.json());
   }
 }

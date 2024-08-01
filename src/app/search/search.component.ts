@@ -25,9 +25,13 @@ export class SearchComponent {
   recipes: any = [];
   filteredRecipes: Recipe[] = [];
 
-  constructor(private recipeServiceService: RecipeServiceService) {
-    this.recipes = this.recipeServiceService.getrecipes();
-    this.filteredRecipes = this.recipes;
+  constructor(private recipeServiceService: RecipeServiceService) {}
+
+  ngOnInit() {
+    this.recipeServiceService.getrecipes().then((data) => {
+      this.recipes = data;
+      this.filteredRecipes = this.recipes;
+    });
   }
 
   onSearch() {
