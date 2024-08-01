@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Newrecipe } from './recipe';
 
 @Injectable({
   providedIn: 'root',
@@ -234,5 +235,22 @@ export class RecipeServiceService {
 
   getrecipebyindex(idx: any) {
     return this.recipes[idx];
+  }
+
+  addrecipe(recipeadd: Newrecipe) {
+    // this.movieList.push(newMovie);
+
+    // Post
+    // 1. method
+    // 2. body - Data & JSON
+    // 3. Header - JSON
+
+    return fetch(`https://669a428d9ba098ed61fef756.mockapi.io/recipes`, {
+      method: 'POST',
+      body: JSON.stringify(recipeadd),
+      headers: {
+        'Content-type': 'application/json',
+      },
+    }).then((res) => res.json());
   }
 }
