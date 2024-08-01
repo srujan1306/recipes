@@ -13,22 +13,27 @@ export const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'recipes',
-    component: RecipelistComponent,
-  },
-  {
     path: 'search',
     component: SearchComponent,
-  },
-
-  {
-    path: 'addrecipes',
-    component: AddRecipeComponent,
   },
   {
     path: 'search/:id',
     component: RecipedetailsComponent,
   },
+  {
+    path: 'recipes',
+    component: RecipelistComponent,
+  },
+  // {
+  //   path: 'recipes/:id',
+  //   component: RecipedetailsComponent,
+  // },
+
+  {
+    path: 'addrecipes',
+    component: AddRecipeComponent,
+  },
+
   {
     path: '**',
     component: PagenotfoundComponent,

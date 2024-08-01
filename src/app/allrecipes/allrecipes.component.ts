@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RecipeServiceService } from '../recipe-service.service';
 import { MatCardModule } from '@angular/material/card';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
 
 import { MatIconModule } from '@angular/material/icon';
@@ -29,20 +29,27 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './allrecipes.component.scss',
 })
 export class AllrecipesComponent {
-  @Input() everyrecipe: any;
+  @Input() everyrecipe: any = {
+    title: '',
+    image: '',
+    ingredients: [''],
+    timeToComplete: '',
+    procedure: [''],
+    category: '',
+    rating: '',
+    summary: '',
+  };
+  @Input() id: any;
   @Output() delete_the_recipe = new EventEmitter<any>();
   idx: any;
+
   // allrecipes: any;
   // constructor(public RecipeServiceService: RecipeServiceService) {
   //   this.recipe_list = this.RecipeServiceService.recipes;
   // }
-  constructor(
-    public MovielistService: RecipeServiceService,
-    private router: Router
-  ) {
-    // this.everyrecipe = this.MovielistService.recipes;
-  }
+  constructor(private router: Router, private route: ActivatedRoute) {}
   show = true;
+
   showDescription() {
     this.show = !this.show;
   }

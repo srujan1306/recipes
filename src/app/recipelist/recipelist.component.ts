@@ -27,26 +27,10 @@ export class RecipelistComponent {
   filteredRecipes: any;
   idx: any;
 
-  constructor(public RecipeServiceService: RecipeServiceService) {
-    // this.recipe_list = this.RecipeServiceService.getrecipes();
-  }
-  ngOnInit() {
-    this.loadrecipies();
-  }
-  loadrecipies() {
-    this.RecipeServiceService.getrecipes().then((data) => {
-      this.recipe_list = data;
-      // this.isLoading = false;
-    });
-    // .catch(() => {
-    //   // this.isLoading = false;
-    //   this.msg = 'Something went wrong';
-    // });
-  }
+  constructor() {}
+
   deleterecipe(recipe_to_be_deleted: any) {
-    // console.log('parent', movie_to_be_deleted);
-    this.RecipeServiceService.delete_the_recipe(recipe_to_be_deleted).then(() =>
-      this.loadrecipies()
-    );
+    // // console.log('parent', movie_to_be_deleted);
+    // this.RecipeServiceService.delete_the_recipe(recipe_to_be_deleted);
   }
 }
