@@ -29,16 +29,17 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './allrecipes.component.scss',
 })
 export class AllrecipesComponent {
-  @Input() everyrecipe: any = {
-    title: '',
-    image: '',
-    ingredients: [''],
-    timeToComplete: '',
-    procedure: [''],
-    category: '',
-    rating: '',
-    summary: '',
-  };
+  @Input() everyrecipe: any;
+  //  = {
+  //   title: '',
+  //   image: '',
+  //   ingredients: [''],
+  //   timeToComplete: '',
+  //   procedure: [''],
+  //   category: '',
+  //   rating: '',
+  //   summary: '',
+  // };
   @Input() id: any;
   @Output() delete_the_recipe = new EventEmitter<any>();
   idx: any;
