@@ -5,7 +5,7 @@ import { RecipeServiceService } from './recipe-service.service';
 export interface Recipe {
   title: string;
   image: string;
-  ingredients: [];
+  ingredients: string;
   timeToComplete: string;
   procedure: string;
   category: string;
