@@ -224,7 +224,7 @@ export class RecipeServiceService {
   ];
 
   getrecipes(): Promise<any[]> {
-    return fetch(`/recipes`).then((res) => res.json());
+    return fetch(`${API}/recipes`).then((res) => res.json());
   }
   delete_the_recipe(recipe_to_be_deleted: any) {
     return fetch(`${API}/recipes/${recipe_to_be_deleted.id}`, {
