@@ -223,8 +223,10 @@ export class RecipeServiceService {
   ];
 
   constructor() {}
-  getrecipes() {
-    return this.recipes;
+  getrecipes(): Promise<any[]> {
+    return fetch('https://669a428d9ba098ed61fef756.mockapi.io/recipes').then(
+      (res) => res.json()
+    );
   }
   delete_the_recipe(movie_to_be_deleted: any) {
     this.recipes.splice(this.recipes.indexOf(movie_to_be_deleted), 1);
