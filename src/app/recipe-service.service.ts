@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Newrecipe } from './recipe';
+import { Recipe } from './app.component';
 const API = 'https://669a428d9ba098ed61fef756.mockapi.io';
 @Injectable({
   providedIn: 'root',
@@ -223,7 +224,7 @@ export class RecipeServiceService {
     },
   ];
 
-  getrecipes(): Promise<any[]> {
+  getrecipes(): Promise<Recipe> {
     return fetch(`${API}/recipes`).then((res) => res.json());
   }
   delete_the_recipe(recipe_to_be_deleted: any) {
