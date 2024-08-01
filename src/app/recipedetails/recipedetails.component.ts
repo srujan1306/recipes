@@ -298,9 +298,9 @@ export class RecipedetailsComponent {
       .then((data) => {
         this.everyrecipe = data;
         this.isLoading = false;
-        this.trustedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
-          this.everyrecipe.image
-        );
+        // this.trustedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+        //   this.everyrecipe.image
+        // );
       })
       .catch(() => {
         this.isLoading = false;

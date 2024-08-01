@@ -8,5 +8,14 @@
       (input)="onSearch()"
     />
   </mat-form-field>
-  <app-recipelist [recipe_list]="filteredRecipes" />
+  <!-- <app-allrecipes [everyrecipe]="filteredRecipes" /> -->
+</div>
+<div class="all-recipes-container">
+  @for(recipe of filteredRecipes; track $index) {
+  <app-allrecipes
+    [everyrecipe]="recipe"
+    (delete_the_recipe)="deleterecipe($event)"
+    [id]="recipe.id"
+  />
+  }
 </div>
