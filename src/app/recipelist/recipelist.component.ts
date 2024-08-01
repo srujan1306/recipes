@@ -6,6 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { Recipe } from '../app.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipelist',
@@ -26,11 +27,34 @@ export class RecipelistComponent {
   @Input() recipe_list: any;
   filteredRecipes: any;
   idx: any;
+  isLoading: boolean = true;
+  msg = '';
 
-  constructor() {}
+  constructor(
+    public RecipeServiceService: RecipeServiceService,
+    private router: Router
+  ) {}
 
-  deleterecipe(recipe_to_be_deleted: any) {
+  ngOnInit() {
+    this.loadRecipes();
+  }
+
+  loadRecipes() {
+    this.RecipeServiceService.getrecipes()
+      .then((data) => {
+        this.recipe_list = data;
+        this.isLoading = false;
+      })
+      .catch(() => {
+        this.isLoading = false;
+        this.msg = 'Something went wrong 🥲';
+      });
+  }
+
+  deleterecipe(recipe_to_be_deleted: Recipe) {
     // // console.log('parent', movie_to_be_deleted);
-    // this.RecipeServiceService.delete_the_recipe(recipe_to_be_deleted);
+    this.RecipeServiceService.delete_the_recipe(recipe_to_be_deleted).then(() =>
+      this.loadRecipes()
+    );
   }
 }
