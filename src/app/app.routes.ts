@@ -4,7 +4,6 @@ import { AllrecipesComponent } from './allrecipes/allrecipes.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { RecipedetailsComponent } from './recipedetails/recipedetails.component';
-import { SearchComponent } from './search/search.component';
 import { EditRecipesComponent } from './edit-recipes/edit-recipes.component';
 
 export const routes: Routes = [
@@ -15,7 +14,12 @@ export const routes: Routes = [
   {
     path: 'search',
     children: [
-      { path: '', component: SearchComponent },
+      {
+        //instead of import at starting, it loads whenever we go to search page
+        path: '',
+        loadComponent: () =>
+          import('./search/search.component').then((c) => c.SearchComponent),
+      }, // component: SearchComponent
       { path: ':id', component: RecipedetailsComponent },
       {
         path: 'edit/:id',

@@ -9,7 +9,11 @@ import { UpperCasePipe } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
-import { MatOption, MatSelect } from '@angular/material/select';
+import {
+  MatOption,
+  MatSelect,
+  MatSelectModule,
+} from '@angular/material/select';
 import { MatRadioButton, MatRadioGroup } from '@angular/material/radio';
 
 @Component({
@@ -25,6 +29,7 @@ import { MatRadioButton, MatRadioGroup } from '@angular/material/radio';
     MatOption,
     MatRadioGroup,
     MatRadioButton,
+    MatSelectModule,
   ],
   templateUrl: './edit-recipes.component.html',
   styleUrl: './edit-recipes.component.scss',
@@ -60,6 +65,7 @@ export class EditRecipesComponent {
       ingredients: '',
       timeToComplete: '',
       procedure: '',
+      cuisines: '',
     });
   }
 
@@ -71,7 +77,11 @@ export class EditRecipesComponent {
     this.RecipeServiceService.getRecipeById(id).then((data) => {
       console.log(data);
       // this.movieForm.setValue vs this.movieForm.patchValue
-      this.recipeForm.patchValue(data);
+      this.recipeForm.patchValue({
+        ...data,
+        ingredients: data.ingredients.join(', '),
+        procedure: data.procedure.join(', '),
+      });
     });
   }
   editrecipe() {
