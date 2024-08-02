@@ -24,14 +24,21 @@
     <mat-error>Please provide full movie name 😁</mat-error>
     } </mat-form-field
   ><br />
-  <mat-form-field>
+  <!-- <mat-form-field>
     <mat-label>Category</mat-label>
     <mat-select>
       <mat-option value="veg">Veg</mat-option>
 
       <mat-option value="non-veg">Non-Veg</mat-option>
     </mat-select> </mat-form-field
-  ><br />
+  >
+  <br /> -->
+  <mat-radio-group aria-label="Select category">
+    <mat-radio-button value="veg">Veg</mat-radio-button>
+    <mat-radio-button value="non-veg">Non-veg</mat-radio-button>
+  </mat-radio-group>
+  <br />
+
   <mat-form-field>
     <input matInput type="text" formControlName="rating" placeholder="rating" />
     @if(rating?.touched && rating?.hasError('required') ){

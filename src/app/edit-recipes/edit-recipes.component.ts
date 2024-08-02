@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatOption, MatSelect } from '@angular/material/select';
+import { MatRadioButton, MatRadioGroup } from '@angular/material/radio';
 
 @Component({
   selector: 'app-edit-recipes',
@@ -22,6 +23,8 @@ import { MatOption, MatSelect } from '@angular/material/select';
     UpperCasePipe,
     MatSelect,
     MatOption,
+    MatRadioGroup,
+    MatRadioButton,
   ],
   templateUrl: './edit-recipes.component.html',
   styleUrl: './edit-recipes.component.scss',
