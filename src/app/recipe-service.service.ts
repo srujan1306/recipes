@@ -264,11 +264,23 @@ export class RecipeServiceService {
     // 2. body - Data & JSON
     // 3. Header - JSON
 
+    console.log(updatedrecipe);
+    const recipeAdapter = {
+      ...updatedrecipe,
+      ingredients: updatedrecipe.ingredients
+        .split(',')
+        .map((ing) => ing.trim()),
+      procedure: updatedrecipe.procedure.split(',').map((ing) => ing.trim()),
+    };
+
+    console.log(recipeAdapter);
+    console.log(updatedrecipe.ingredients.split(','));
+
     return fetch(
       `https://669a428d9ba098ed61fef756.mockapi.io/recipes/${updatedrecipe.id}`,
       {
         method: 'PUT',
-        body: JSON.stringify(updatedrecipe),
+        body: JSON.stringify(recipeAdapter),
         headers: {
           'Content-type': 'application/json',
         },
