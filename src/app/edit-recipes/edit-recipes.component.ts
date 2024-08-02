@@ -60,7 +60,8 @@ export class EditRecipesComponent {
   }
 
   ngOnInit() {
-    let id = this.route.snapshot.paramMap.get('id') as string; // From URL
+    // let id = this.route.snapshot.paramMap.get('id'); // From URL
+    let id = this.route.snapshot.paramMap.get('id') as string;
 
     this.RecipeServiceService.getRecipeById(id).then((data) => {
       console.log(data);
@@ -69,6 +70,7 @@ export class EditRecipesComponent {
     });
   }
   editrecipe() {
+    // let id = this.route.snapshot.paramMap.get('id') as string;
     if (this.recipeForm.valid) {
       let updatedrecipe: Recipe = this.recipeForm.value;
 
