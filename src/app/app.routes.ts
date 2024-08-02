@@ -17,13 +17,13 @@ export const routes: Routes = [
     children: [
       { path: '', component: SearchComponent },
       { path: ':id', component: RecipedetailsComponent },
+      {
+        path: 'edit/:id',
+        component: EditRecipesComponent,
+      },
     ],
   },
 
-  {
-    path: 'search/edit/:id',
-    component: EditRecipesComponent,
-  },
   {
     path: 'addrecipes',
     component: AddRecipeComponent,

@@ -265,7 +265,7 @@ export class RecipeServiceService {
     // 3. Header - JSON
 
     return fetch(
-      `https://6402db84f61d96ac487212a6.mockapi.io/movies/${updatedrecipe.id}`,
+      `https://669a428d9ba098ed61fef756.mockapi.io/recipes/${updatedrecipe.id}`,
       {
         method: 'PUT',
         body: JSON.stringify(updatedrecipe),

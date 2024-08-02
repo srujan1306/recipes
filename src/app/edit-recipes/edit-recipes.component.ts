@@ -31,16 +31,17 @@ import { MatRadioButton, MatRadioGroup } from '@angular/material/radio';
 })
 export class EditRecipesComponent {
   recipeForm: FormGroup;
-  route: any;
+  // route: any;
 
   constructor(
     public RecipeServiceService: RecipeServiceService,
-    // private route: Route,
+    private route: ActivatedRoute,
     private router: Router,
     private fb: FormBuilder
   ) {
     // this.recipeadd = this.RecipeServiceService.getrecipes();
     this.recipeForm = this.fb.group({
+      id: [''],
       image: [
         '',
         [
@@ -65,6 +66,7 @@ export class EditRecipesComponent {
   ngOnInit() {
     // let id = this.route.snapshot.paramMap.get('id'); // From URL
     let id = this.route.snapshot.paramMap.get('id') as string;
+    console.log(id);
 
     this.RecipeServiceService.getRecipeById(id).then((data) => {
       console.log(data);
