@@ -19,6 +19,7 @@
     <mat-error>Please provide full movie name 😁</mat-error>
     }
   </mat-form-field>
+  <label id="example-radio-group-label">Select Category</label>
   <mat-radio-group aria-label="Select category">
     <mat-radio-button value="veg">Veg</mat-radio-button>
     <mat-radio-button value="non-veg">Non-veg</mat-radio-button>
@@ -66,5 +67,5 @@
       placeholder="Procedure"
     />
   </mat-form-field>
-  <button mat-flat-button (click)="addrecipe()">Add Recipe</button>
+  <button mat-raised-button type="submit">{{ "addrecipe" }}</button>
 </form>
