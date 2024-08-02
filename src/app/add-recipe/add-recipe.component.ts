@@ -15,6 +15,7 @@ import { Newrecipe } from '../recipe';
 import { Router } from '@angular/router';
 import { Recipe } from '../app.component';
 import { MatOption, MatSelect } from '@angular/material/select';
+import { MatRadioButton, MatRadioGroup } from '@angular/material/radio';
 
 @Component({
   selector: 'app-add-recipe',
@@ -29,6 +30,8 @@ import { MatOption, MatSelect } from '@angular/material/select';
     MatSelect,
     MatLabel,
     MatOption,
+    MatRadioGroup,
+    MatRadioButton,
   ],
   templateUrl: './add-recipe.component.html',
   styleUrl: './add-recipe.component.scss',
