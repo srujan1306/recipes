@@ -39,7 +39,6 @@ export class SearchComponent {
     this.recipeServiceService.getrecipes().then((data) => {
       this.recipes = data;
       this.filteredRecipes = this.recipes;
-      console.log(this.filteredRecipes);
     });
   }
   onSearch() {
